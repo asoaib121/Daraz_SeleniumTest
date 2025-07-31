@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite"  >
+    <listeners>
+
+        <listener class-name="Daraz.listeners.MethodInterceptor" />
+        <listener class-name="Daraz.listeners.ListenerClass" />
+        <listener class-name="Daraz.listeners.AnnotationTransformers" />
+    </listeners>
+
+    <test thread-count="2"  name="Test" parallel="methods">
+
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="137.0.7151.68"/>
+        <parameter name="browser" value="firefox"/>
+        <parameter name="version" value="139.0.1"/>
+
+        <classes>
+<!--   <class name="Daraz.dockerexecution.ExecuteTestsInDocker" />-->
+            <class name="Daraz.tests.DarazTest" />
+        </classes>
+    </test> <!--Test -->
+</suite>  <!--Suite -->

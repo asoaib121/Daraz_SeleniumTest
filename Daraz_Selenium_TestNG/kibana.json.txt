@@ -1,0 +1,21 @@
+{
+  "default": [
+    {
+      "id": "kibana",
+      "title": "আমার ড্যাশবোর্ড",
+      "items": [
+        { "id": "discover", "title": "ডেটা এক্সপ্লোর" },
+        { "id": "dashboard", "title": "ড্যাশবোর্ড" },
+        { "id": "visualize", "title": "ভিজুয়ালাইজেশন" }
+      ]
+    },
+    {
+      "id": "monitoring",
+      "title": "মনিটরিং",
+      "items": [
+        { "id": "logs", "title": "লগস" },
+        { "id": "metrics", "title": "মেট্রিক্স" }
+      ]
+    }
+  ]
+}
