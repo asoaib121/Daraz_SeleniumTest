@@ -1,0 +1,99 @@
+# To execute this docker-compose yml file use 'docker-compose -f <file_name> up'
+#Add the '-d' flag at the end for detached execution
+version: "3.8"
+services:
+
+  selenium-hub:
+    image: selenium/hub:4.30.0
+    container_name: selenium-hub
+    ports:
+      - "4445:4444"
+    environment:
+      - SE_VIDEO_BASE_URL=http://localhost:4445/videos
+    restart: always
+
+  chrome:
+    image: selenium/node-chrome:4.30.0
+    container_name: chrome-node
+    shm_size: "2gb"
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+#      - SE_EVENT_BUS_PUBLISH_PORT=4442
+#      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+    #      - SE_NODE_APPLICATION_NAME=chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    restart: on-failure:3
+
+  firefox:
+    image: selenium/node-firefox:4.30.0
+    container_name: firefox-node
+    shm_size: "2gb"
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_NODE_MAX_SESSIONS=5
+#      - SE_EVENT_BUS_PUBLISH_PORT=4442
+#      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+    #      - SE_NODE_APPLICATION_NAME=firefox
+    volumes:
+      - /dev/shm:/dev/shm
+    restart: on-failure:3
+  video:
+    image: selenium/video:latest
+    container_name: video-recorder
+    volumes:
+      - "d:/selenium/Project/Daraz/src/main/java/Daraz/video:/videos"
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_VIDEO_RETAIN_COUNT=10
+      - SE_VIDEO_QUALITY=medium
+#      - SE_VIDEO_BASE_URL=http://localhost:4445/videos
+#      - SE_VIDEO_FILE_FORMAT="session_%(sessionId)s.mp4"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.ml.enabled=true
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+#    networks:
+#      - elastic
+
+
+#  kibana:
+#    image: docker.elastic.co/kibana/kibana:8.13.0
+#    container_name: kibana
+#    environment:
+##      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+#      - xpack.cloud_integrations.experiments.enabled=true
+#      - xpack.observability.aiAssistant.enabled=true
+#      - navigation.solutionNavigation.enabled=false
+##      - navigation.solutionNavigation.default="[{\"id\":\"kibana\",\"title\":\"Kibana\",\"items\":[{\"id\":\"discover\"},{\"id\":\"dashboard\"},{\"id\":\"canvas\"}]}]"
+#    ports:
+#      - "5601:5601"
+#    depends_on:
+#      - elasticsearch
+##    networks:
+##      - elastic
+volumes:
+  es_data:
+
+#networks:
+#  elastic:
+#    driver: bridge
