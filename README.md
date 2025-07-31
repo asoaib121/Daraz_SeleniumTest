@@ -1,14 +1,31 @@
-# Daraz Selenium Automation Framework with Docker Grid
+# 🛒 Daraz Automation Framework
 
-This project is a complete automation framework designed for testing the Daraz website using **Selenium WebDriver**, **TestNG**, **ExtentReports**, and **Docker Grid**. The framework follows a modular, maintainable, and scalable architecture using **Java + Maven**.
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Selenium](https://img.shields.io/badge/Selenium-Framework-brightgreen)
+![TestNG](https://img.shields.io/badge/TestNG-UnitTesting-orange)
+![Maven](https://img.shields.io/badge/Build-Maven-C71A36)
+![ExtentReport](https://img.shields.io/badge/ExtentReport-Integrated-success)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
+![Last Commit](https://img.shields.io/github/last-commit/soaibahmed/DarazAutomationFramework)
+![License](https://img.shields.io/github/license/soaibahmed/DarazAutomationFramework)
 
 ---
 
-## 📁 Project Structure
+An advanced Selenium automation framework for testing the **Daraz e-commerce platform**, built using Java, TestNG, Maven, and ExtentReports.  
+Supports parallel test execution and Dockerized Selenium Grid for scalable automation.
 
-# Daraz Selenium Automation Framework with Docker Grid
+---
 
-This project is a complete automation framework designed for testing the Daraz website using **Selenium WebDriver**, **TestNG**, **ExtentReports**, and **Docker Grid**. The framework follows a modular, maintainable, and scalable architecture using **Java + Maven**.
+## 📦 Tech Stack
+
+- **Language:** Java 17
+- **Test Framework:** TestNG
+- **Build Tool:** Maven
+- **Reporting:** ExtentReports
+- **Excel Integration:** Apache POI
+- **Grid Support:** Docker + Selenium Grid
+- **Architecture:** Page Object Model (POM)
 
 ---
 
@@ -114,6 +131,15 @@ DarazAutomationFramework/
 - ✅ Data-driven testing using Excel  
 - ✅ Custom retry mechanism and annotations  
 - ✅ Configurable via `config.properties` file  
+
+---
+
+## 🧪 Test Workflow
+
+1. **Read Search Term** from Excel ➝ `SearchBoxComponent`
+2. **Select Brand** from Excel ➝ `BrandSelectionComponent`
+3. **Click Product** ➝ `ProductClickComponent`
+4. **Close Browser & Generate Report**
 
 ---
 
