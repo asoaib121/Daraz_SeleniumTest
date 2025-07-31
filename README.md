@@ -224,8 +224,8 @@ BrandFilterTest (applies dynamic brand filters)
 9. **View Test Report**
   -->Go to: extent-test-output/index.html
 
-10. **Stop the Containers**
-  --> Go to Docker dektop terminal.
+10. **Stop your Containers**
+  --> Go to Docker desktop terminal.
   --> docker-compose down
 
 
@@ -250,6 +250,6 @@ Screenshots on failure are auto-saved using ScreenshotUtils.
 
 Shoaib
 
-BSc in CSE, Green University of Bangladesh
+BSC in CSE, Green University of Bangladesh
 
 💼 Focus: QA Automation Engineer
