@@ -7,118 +7,49 @@ This project is a complete automation framework designed for testing the Daraz w
 ## 📁 Project Structure
 
 DarazAutomationFramework/
-│
 ├── pom.xml
 ├── testng.xml
 ├── docker-compose.yml
 ├── .gitignore
-│
-├── extent-test-output/             # Extent reports folder
-│   ├── index.html
-│   └── screenshots/
-│
-├── executable/                     # Browser drivers
-│   ├── chromedriver-win64/
-│   ├── geckodriver-v0.34.0-win64/
-│   ├── chromedriver-win64.zip
-│   └── geckodriver-v0.34.0-win64.zip
-│
+├── extent-test-output/
+│ ├── index.html
+│ └── screenshots/
+├── executable/
+│ ├── chromedriver-win64/
+│ ├── geckodriver-v0.34.0-win64/
+│ ├── chromedriver-win64.zip
+│ └── geckodriver-v0.34.0-win64.zip
 ├── resources/
-│   ├── config.properties
-│   └── TestData.xlsx
-│
+│ ├── config.properties
+│ └── TestData.xlsx
 ├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── Daraz/
-│   │           ├── annotations/
-│   │           │   ├── AnnotationsTest.java
-│   │           │   └── FrameworkAnnotation.java
-│   │           │
-│   │           ├── config/
-│   │           │   └── config.properties
-│   │           │
-│   │           ├── constants/
-│   │           │   └── FrameworkConstants.java
-│   │           │
-│   │           ├── dataprovider/
-│   │           │   ├── DataProviderDependencyI.java
-│   │           │   ├── DataProviderExcel.java
-│   │           │   └── DataProviderTest.java
-│   │           │
-│   │           ├── driver/
-│   │           │   ├── DriverManager.java
-│   │           │   └── package-info.java
-│   │           │
-│   │           ├── encodedecode/
-│   │           │   └── Runner.java
-│   │           │
-│   │           ├── enums/
-│   │           │   ├── AuthorType.java
-│   │           │   ├── CategoryType.java
-│   │           │   ├── ConfigProperties.java
-│   │           │   ├── EnumRunner.java
-│   │           │   ├── Severity.java
-│   │           │   └── WaitStrategy.java
-│   │           │
-│   │           ├── exceptions/
-│   │           │   ├── BrowserInvocationFailedException.java
-│   │           │   ├── FrameworkException.java
-│   │           │   ├── InvalidPathForExcelException.java
-│   │           │   ├── InvalidPathForFilesException.java
-│   │           │   ├── InvalidPathForPropertyFileException.java
-│   │           │   └── PropertyFileUsageException.java
-│   │           │
-│   │           ├── factory/
-│   │           │   ├── DriverFactory.java
-│   │           │   └── ExplicitWaitFactory.java
-│   │           │
-│   │           ├── listeners/
-│   │           │   ├── AnnotationTransformers.java
-│   │           │   ├── ListenerClass.java
-│   │           │   └── MethodInterceptor.java
-│   │           │
-│   │           ├── pages/
-│   │           │   ├── BasePage.java
-│   │           │   ├── BrandFilterComponent.java
-│   │           │   ├── DarazHomePage.java
-│   │           │   ├── DarazPrinterAndInkPage.java
-│   │           │   ├── ProductSelectionComponent.java
-│   │           │   ├── SearchBoxComponent.java
-│   │           │   └── SearchButtonComponent.java
-│   │           │
-│   │           ├── reports/
-│   │           │   ├── ExtentLogger.java
-│   │           │   ├── ExtentManager.java
-│   │           │   └── ExtentReport.java
-│   │           │
-│   │           ├── utils/
-│   │           │   ├── DataProviderUtils.java
-│   │           │   ├── DynamicXpathUtils.java
-│   │           │   ├── ExcelUtils.java
-│   │           │   ├── PropertyUtils.java
-│   │           │   └── ScreenshotUtils.java
-│   │           │
-│   │           ├── webdrivermanager/
-│   │           │   ├── Runner.java
-│   │           │   └── WebDriverManagerTest.java
-│   │           │
-│   │           └── Runner.java
-│   │
-│   └── test/
-│       └── java/
-│           └── Daraz/
-│               ├── tests/
-│               │   ├── BaseTest.java
-│               │   └── DarazTest.java
-│               └── com/
-│                   └── trywithresources/
-│                       └── AnnotationsTest.java
-│
+│ └── main/
+│ └── java/
+│ └── Daraz/
+│ ├── annotations/
+│ ├── config/
+│ ├── constants/
+│ ├── dataprovider/
+│ ├── driver/
+│ ├── encodedecode/
+│ ├── enums/
+│ ├── exceptions/
+│ ├── factory/
+│ ├── listeners/
+│ ├── pages/
+│ ├── reports/
+│ ├── utils/
+│ ├── webdrivermanager/
+│ └── Runner.java
+│ └── test/
+│ └── java/
+│ └── Daraz/
+│ ├── tests/
+│ └── com/
 ├── target/
 ├── test_output/
-└── video/                          # For video recordings
-    └── videos/
+└── video/
+└── videos/
 ---
 
 ## 🚀 Features
