@@ -7,8 +7,8 @@
 ![ExtentReport](https://img.shields.io/badge/ExtentReport-Integrated-success)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
-![Last Commit](https://img.shields.io/github/last-commit/soaibahmed/DarazAutomationFramework)
-![License](https://img.shields.io/github/license/soaibahmed/DarazAutomationFramework)
+![Last Commit](https://img.shields.io/github/last-commit/asoaib121/Daraz_SeleniumTest)
+![License](https://img.shields.io/github/license/asoaib121/Daraz_SeleniumTest)
 
 ---
 
