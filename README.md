@@ -157,12 +157,12 @@ DarazAutomationFramework/
 
 ---
 
-🚀 Parallel Test Execution
+## 🚀 Parallel Test Execution
 This framework is designed to run multiple types of automated tests in parallel on the same website, ensuring faster feedback and optimized execution time.
 
 ---
 
-✅ What It Supports
+## ✅ What It Supports
 Multiple test categories (e.g., functional tests + filter tests) run simultaneously.
 
 Built-in support for TestNG parallel execution using data providers or suite-level thread control.
@@ -171,7 +171,7 @@ Seamless integration with ExtentReports, where each test run logs its own execut
 
 ---
 
-⚙️ How It Works
+## ⚙️ How It Works
 Test classes are grouped and executed in parallel using testng.xml suite configuration.
 
 All tests use thread-safe DriverManager, ensuring independent browser sessions.
@@ -180,7 +180,7 @@ Screenshots and logs are maintained per thread/test for easy debugging and repor
 
 ---
 
-🧪 Example
+## 🧪 Example
 You can run tests like:
 
 SearchTest (handles product search from Excel)
